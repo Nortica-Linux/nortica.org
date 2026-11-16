@@ -1,0 +1,10 @@
+/site/
+/.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.secret.yaml
+*.key
+*.pem
+/kubeconfig

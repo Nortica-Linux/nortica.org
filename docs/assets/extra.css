@@ -1,0 +1,474 @@
+/* Gruvbox light: warm paper, dark ink, ochre and forest accents. */
+:root,
+[data-md-color-scheme="default"] {
+  --md-text-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --md-code-font: ui-monospace, "Cascadia Code", "DejaVu Sans Mono", monospace;
+  --md-default-bg-color: #fbf1c7;
+  --md-default-bg-color--light: #f2e5bc;
+  --md-default-fg-color: #3c3836;
+  --md-default-fg-color--light: #665c54;
+  --md-default-fg-color--lighter: #7c6f64;
+  --md-default-fg-color--lightest: #d5c4a1;
+  --md-primary-fg-color: #8f3f0b;
+  --md-primary-fg-color--light: #af3a03;
+  --md-primary-fg-color--dark: #7c2d12;
+  --md-primary-bg-color: #fbf1c7;
+  --md-accent-fg-color: #79740e;
+  --md-typeset-a-color: #9d0006;
+  --md-code-bg-color: #f2e5bc;
+  --md-code-fg-color: #3c3836;
+  --md-footer-bg-color: #3c3836;
+  --md-footer-bg-color--dark: #282828;
+}
+
+/* Keep the supplied cream-lettered horizontal artwork legible in both modes. */
+.nortica-banner {
+  margin: 0 0 1.6rem;
+  padding: clamp(1rem, 4vw, 2.5rem);
+  border: 1px solid #665c54;
+  border-radius: .8rem;
+  background: #282828;
+}
+
+.nortica-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.md-header__button.md-logo img {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: contain;
+}
+
+.md-typeset .md-button--primary {
+  color: var(--md-primary-bg-color);
+}
+
+/* Homepage live GitHub issues */
+.issues-status {
+  padding: 1rem 1.2rem;
+  border: 1px dashed var(--md-default-fg-color--lightest);
+  border-radius: .8rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.github-issues [hidden] {
+  display: none;
+}
+
+.issue-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.2rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .8rem;
+  background: color-mix(in srgb, var(--md-default-fg-color) 3%, var(--md-default-bg-color));
+  overflow-wrap: anywhere;
+}
+
+.issue-state {
+  color: var(--md-primary-fg-color);
+  font-size: .65rem;
+  font-weight: 700;
+}
+
+.md-typeset .issue-card h3 {
+  margin: .5rem 0;
+  font-size: .95rem;
+}
+
+.md-typeset .issue-excerpt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin: 0 0 .75rem;
+  font-size: .75rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.issue-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-bottom: .75rem;
+}
+
+.issue-label {
+  max-width: 100%;
+  padding: .1rem .5rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 12%, var(--md-default-bg-color));
+  font-size: .6rem;
+}
+
+.md-typeset .issue-meta {
+  margin: auto 0 0;
+  padding-top: .5rem;
+  font-size: .6rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Dark theme */
+[data-md-color-scheme="slate"] {
+  --md-hue: 35;
+  --md-default-bg-color: #282828;
+  --md-default-bg-color--light: #3c3836;
+  --md-default-fg-color: #ebdbb2;
+  --md-default-fg-color--light: #bdae93;
+  --md-default-fg-color--lighter: #a89984;
+  --md-default-fg-color--lightest: #665c54;
+  --md-primary-fg-color: #fabd2f;
+  --md-primary-fg-color--light: #fe8019;
+  --md-primary-fg-color--dark: #d79921;
+  --md-primary-bg-color: #282828;
+  --md-accent-fg-color: #b8bb26;
+  --md-typeset-a-color: #fabd2f;
+  --md-code-bg-color: #1d2021;
+  --md-code-fg-color: #ebdbb2;
+  --md-code-hl-color: #504945;
+  --md-code-hl-number-color: #d3869b;
+  --md-code-hl-string-color: #b8bb26;
+  --md-code-hl-keyword-color: #fb4934;
+  --md-code-hl-function-color: #fabd2f;
+  --md-code-hl-comment-color: #a89984;
+  --md-footer-bg-color: #1d2021;
+  --md-footer-bg-color--dark: #1d2021;
+}
+
+/* Header and navigation */
+.md-header {
+  backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--md-default-bg-color) 82%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--md-default-fg-color) 12%, transparent);
+  color: var(--md-default-fg-color);
+}
+
+.md-tabs {
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color--light);
+}
+
+.md-main__inner {
+  margin-top: 1.8rem;
+}
+
+.md-content h1 {
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+/* Homepage hero */
+.hero-copy {
+  max-width: 760px;
+  margin: -0.5rem 0 3rem;
+  font-size: 1.12rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.hero-copy .md-button {
+  margin: 1rem 0.5rem 0 0;
+}
+
+.home-links > p {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .5rem;
+}
+
+.hero-copy .home-links .md-button {
+  min-width: 0;
+  margin: 1rem 0 0;
+  padding: .8em 1em;
+  font-size: .8rem;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 600px) {
+  .home-links > p {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy .home-links .md-button {
+    margin: 0;
+  }
+}
+
+/* Homepage feature cards */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.feature-card,
+.release-card {
+  padding: 1.25rem 1.3rem;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--md-primary-fg-color) 8%, var(--md-default-bg-color)),
+    var(--md-default-bg-color)
+  );
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 22%, transparent);
+  border-radius: .8rem;
+  box-shadow: 0 10px 35px color-mix(in srgb, var(--md-default-fg-color) 6%, transparent);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+/* Shared interaction for linked homepage cards. */
+.feature-card--linked,
+.release-card,
+.issue-card {
+  position: relative;
+  transition: box-shadow 150ms ease, transform 150ms ease;
+}
+
+.feature-card--linked:hover,
+.feature-card--linked:focus-within,
+.release-card:hover,
+.release-card:focus-within,
+.issue-card:hover,
+.issue-card:focus-within {
+  box-shadow: 0 12px 35px color-mix(in srgb, var(--md-primary-fg-color) 16%, transparent);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-card--linked,
+  .release-card,
+  .issue-card {
+    transition: none;
+    transform: none;
+  }
+}
+
+.md-typeset :is(.feature-card--linked, .release-card, .issue-card) h3 a {
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset :is(.feature-card--linked, .release-card, .issue-card):is(:hover, :focus-within) h3 a {
+  color: var(--md-accent-fg-color);
+}
+
+.feature-card--linked h3 a.headerlink,
+.release-card h3 a.headerlink {
+  display: none;
+}
+
+.feature-card--linked h3 a:not(.headerlink)::after,
+.release-card h3 a:not(.headerlink)::after,
+.issue-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: .8rem;
+}
+
+.feature-card--linked h3 a:not(.headerlink):focus-visible::after,
+.release-card h3 a:not(.headerlink):focus-visible::after,
+.issue-card h3 a:focus-visible::after {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 3px;
+}
+
+/* Keep secondary release actions above the heading's full-card link. */
+.release-card p a {
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Release cards - always one per row */
+.release-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.release-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.md-typeset .release-card h3 {
+  margin: 0 0 .5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.md-typeset .release-card p {
+  margin: 0 0 .75rem;
+  font-size: .8rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .release-card p:last-child {
+  margin: auto 0 0;
+  padding-top: .5rem;
+}
+
+.md-typeset .release-card p:last-child a {
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+.md-typeset .release-card p:last-child a:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* Keyboard shortcut cards */
+.shortcut-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.shortcut-keys {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem;
+  vertical-align: middle;
+}
+
+.md-typeset .shortcut-keys kbd {
+  font-size: .65rem;
+  padding: .15rem .35rem;
+  white-space: nowrap;
+  border-radius: .25rem;
+}
+
+.shortcut-plus {
+  color: var(--md-default-fg-color--light);
+  font-size: .65rem;
+}
+
+.shortcut-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .8rem;
+  padding: 1.15rem;
+  background: color-mix(in srgb, var(--md-default-fg-color) 3%, var(--md-default-bg-color));
+}
+
+.shortcut-eyebrow {
+  color: var(--md-primary-fg-color);
+  font-size: .6rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 700;
+}
+
+.md-typeset .shortcut-card h2 {
+  margin: .45rem 0 1rem;
+  font-weight: 700;
+}
+
+.shortcut-card dl {
+  margin: 0;
+}
+
+.shortcut-row {
+  padding: .6rem 0;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .shortcut-row dt {
+  font-size: .75rem;
+  font-weight: 500;
+  margin: 0 0 .35rem;
+}
+
+.md-typeset .shortcut-row dd {
+  margin: 0;
+}
+
+.shortcut-caution {
+  color: var(--md-default-fg-color--light);
+  font-size: .7rem;
+}
+
+@media screen and (max-width: 600px) {
+  .shortcut-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Wiki topic cards */
+.wiki-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.md-typeset .wiki-card {
+  display: block;
+  padding: 1.2rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .8rem;
+  background: color-mix(in srgb, var(--md-default-fg-color) 3%, var(--md-default-bg-color));
+  color: var(--md-default-fg-color);
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.md-typeset .wiki-card:hover,
+.md-typeset .wiki-card:focus-visible {
+  border-color: var(--md-primary-fg-color);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 7%, var(--md-default-bg-color));
+}
+
+.md-typeset .wiki-card:focus-visible {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 3px;
+}
+
+.md-typeset .wiki-card h2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 .5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.wiki-card h2 span {
+  color: var(--md-primary-fg-color);
+}
+
+.md-typeset .wiki-card p {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+  font-size: .8rem;
+}
+
+@media screen and (max-width: 600px) {
+  .wiki-grid {
+    grid-template-columns: 1fr;
+  }
+}
