@@ -12,7 +12,9 @@ Source for **<https://docs.nortica.org>**, built with MkDocs Material. Nortica w
 
 Markdown lives under `docs/`, navigation in `mkdocs.yml`, and styles in `docs/assets/extra.css`. Gruvbox light/dark palettes follow the OS preference and can be switched from the header. System fonts avoid third-party font requests.
 
-Original artwork lives in `media/`. `docs/media` is a relative symlink so MkDocs publishes those exact files without maintaining duplicate assets. Keep the horizontal logo as the home-page banner, the symbol as the header mark and the supplied favicon as the browser icon.
+Original artwork lives in `media/`. `docs/media` is a relative symlink so MkDocs publishes those exact files without maintaining duplicate assets. Display only the small symbol in the top-left header and the supplied favicon; there is no large home-page banner. The main Gruvbox yellow is `#d79921`.
+
+Preserve the author's documentation content. Do not rewrite prose, restructure pages or change command examples unless explicitly requested; rebranding only calls for the requested name/link substitutions.
 
 The home page optionally loads public documentation issues directly from GitHub's API. No token is required; if the API is unavailable or rate-limited, ordinary tracker links remain available.
 

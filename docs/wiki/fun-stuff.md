@@ -35,4 +35,4 @@ flatpak install flathub com.spotify.Client
 
 
 !!! tip "Something missing?"
-    If you think anything is missing, please create an [Issue](https://github.com/Nortica-Linux/nortica.org/issues/new).
+    If you think anything is missing, please create an [Issue](https://github.com/Nortica-Linux/nortica.org/issues/new?labels=Wiki).

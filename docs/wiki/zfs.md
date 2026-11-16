@@ -1,7 +1,5 @@
 # Using ZFS
 
-Nortica currently creates `zroot/ROOT/debian` for `/` and `zroot/home` for `/home`. The `debian` dataset name is intentional and is still used by the Nortica installer. Outputs below are examples from an older installation; extra datasets, snapshot dates and device IDs will differ on your system.
-
 ## General health and status
 
 ### Get zpool status
@@ -111,7 +109,7 @@ This allows for easy restore of files.
 Check if its running:
 ```bash
 # Check if its running:
-sudo systemctl status zfs-autosnap
+sudo sysemctl status zfs-autosnap
 
 ● zfs-autosnap.service - ZFS autosnapshot daemon
      Loaded: loaded (/etc/systemd/system/zfs-autosnap.service; enabled; preset: enabled)
@@ -155,4 +153,4 @@ daily-root|zroot/ROOT/debian|auto-daily-$(%Y%m%d)|-H0 -M0|14|1d|r
 
 
 !!! tip "Something missing?"
-    If you think anything is missing, please create an [Issue](https://github.com/Nortica-Linux/nortica.org/issues/new).
+    If you think anything is missing, please create an [Issue](https://github.com/Nortica-Linux/nortica.org/issues/new?labels=Wiki).

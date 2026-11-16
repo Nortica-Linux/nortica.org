@@ -4,25 +4,17 @@ hide:
   - toc
 ---
 
-<div class="nortica-banner" markdown>
-
-![Nortica](media/nortica-horizontal.png)
-
-</div>
-
-# Your desktop. Solid roots.
+# Debian for friends you forced linux upon.
 
 <div class="hero-copy" markdown>
 
-Nortica brings together Debian, Hyprland, Noctalia and ZFS: a stable foundation, a modern desktop and a filesystem built for snapshots.
-
-Formerly DebianZFS. New name, same idea: Linux you can make yourself at home in.
+> "Give a man a fish, and you feed him for a day; teach a man to fish, and you feed him for a lifetime"
 
 <div class="home-links" markdown>
 
-[Install Nortica](getting-started/index.md){ .md-button .md-button--primary }
-[Explore the wiki](wiki/index.md){ .md-button }
-[Keyboard shortcuts](shortcuts/index.md){ .md-button }
+[First Install](getting-started/index.md){ .md-button .md-button--primary }
+[Wiki](wiki/index.md){ .md-button }
+[Keyboard Shortcuts](shortcuts/index.md){ .md-button }
 
 </div>
 </div>
@@ -33,57 +25,67 @@ Formerly DebianZFS. New name, same idea: Linux you can make yourself at home in.
 
 ### Hyprland + Noctalia
 
-A tiling desktop and a cohesive shell, with warm Gruvbox colors throughout.
+For a modern experience on a stable distribution.
 
 </div>
 
 <div class="feature-card feature-card--linked" markdown>
 
-### [ZFS underneath](wiki/zfs.md)
+### [ZFS](wiki/zfs.md)
 
-Snapshots, encryption and optional mirrored storage on a Debian foundation.
+A Robust Filesystem with features like Raid and Snapshotting.
 
 </div>
 
 <div class="feature-card feature-card--linked" markdown>
 
-### [A guided install](getting-started/index.md)
+### [Easy Setup](getting-started/index.md)
 
-Boot the live image, try the desktop and configure your installation before any disks are erased.
+Reproducable on all your systems.
 
 </div>
+
 </div>
 
-## Get Nortica
+## Releases
 
 <div class="release-grid" markdown>
 
 <div class="release-card" markdown>
 
-### [Nortica v1.0.0](releases/v1.0.0.md)
+### [v1.0.0](releases/v1.0.0.md)
 
-The first Nortica release: a live image, guided installer and shared desktop configuration.
+**Initial Release**
 
-[Download the ISO](https://github.com/Nortica-Linux/nortica/releases/latest) · [Installation guide](getting-started/index.md) · [Release notes](releases/v1.0.0.md)
+1. Unified and standardized everything.
+2. Custom ISO for easy Install and trying out the system.
+3. Fixes to missing Firmware for Network drivers.
+4. Custom Wallpaper (more to come)
+5. Custom Scripts to update a system on the go.
+6. ...
+
+ | 
+[[View release notes]](releases/v1.0.0.md)
+ | 
+[[Download the ISO]](https://github.com/Nortica-Linux/nortica/releases)
+ | 
+[[Get Started]](https://docs.nortica.org/getting-started/)
+ | 
 
 </div>
+
+
 </div>
 
-## One project, three repositories
+## Open Issues
 
-- [**nortica**](https://github.com/Nortica-Linux/nortica) — live image, installer and system setup.
-- [**config**](https://github.com/Nortica-Linux/config) — dotfiles, Noctalia settings, wallpapers and user setup.
-- [**nortica.org**](https://github.com/Nortica-Linux/nortica.org) — this documentation website and its artwork.
-
-## Help improve the docs
-
-Missing a step or found something confusing? Documentation issues live in the website repository. For installer or system problems, use the [Nortica issue tracker](https://github.com/Nortica-Linux/nortica/issues).
+Feel free to open your own:
 
 <div class="github-issues" data-github-issues>
-  <p class="issues-status" role="status" hidden>Loading open documentation issues…</p>
+  <p class="issues-status" role="status" hidden>Loading open issues…</p>
   <div class="issues-grid" hidden></div>
-  <noscript>Enable JavaScript to display open issues here, or use the GitHub links below.</noscript>
+  <noscript>Enable JavaScript to display open issues here, or use the GitHub link below.</noscript>
 </div>
 
-[Documentation issues](https://github.com/Nortica-Linux/nortica.org/issues){ .md-button }
-[Suggest a docs change](https://github.com/Nortica-Linux/nortica.org/issues/new){ .md-button .md-button--primary }
+[View all issues on GitHub](https://github.com/Nortica-Linux/nortica.org/issues){ .md-button }
+[Create an issue](https://github.com/Nortica-Linux/nortica.org/issues/new?labels=Wiki){ .md-button .md-button--primary }

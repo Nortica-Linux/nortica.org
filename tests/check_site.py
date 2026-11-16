@@ -42,7 +42,9 @@ def check(site):
         if not (site / asset).is_file():
             errors.append(f"Missing brand asset: {asset}")
     home = (site / "index.html").read_text() if (site / "index.html").exists() else ""
-    for expected in ("https://docs.nortica.org/", "media/nortica-horizontal.png", "Nortica-Linux/nortica.org"):
+    if "nortica-banner" in home or "media/nortica-horizontal.png" in home:
+        errors.append("Home page must not include the large logo/banner")
+    for expected in ("https://docs.nortica.org/", "media/nortica-symbol.png", "Nortica-Linux/nortica.org"):
         if expected not in home:
             errors.append(f"Home page missing {expected}")
     if list(site.rglob(".git")):

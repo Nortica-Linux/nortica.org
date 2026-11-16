@@ -5,9 +5,9 @@ hide:
 
 # Keyboard shortcuts
 
-These defaults come from [Nortica's Hyprland configuration](https://github.com/Nortica-Linux/config/blob/main/dotfiles/hypr/hyprland.lua). Customize them in `~/.config/hypr/hyprland.lua`; see [configuration files](../wiki/config-files.md) before updating linked dotfiles.
+First and foremost, everything is configurable in your Hyprland config.
 
-Each monitor has ten workspaces. Number keys select workspaces on the focused monitor; **0** means the tenth workspace. **Super + mouse wheel** cycles through them, and **Super + .** focuses the next monitor.
+These are the ergonomic defaults I chose.
 
 <div class="shortcut-grid">
 
@@ -45,13 +45,13 @@ Each monitor has ten workspaces. Number keys select workspaces on the focused mo
       <div class="shortcut-row">
         <dt>Switch workspace</dt>
         <dd>
-          <span class="shortcut-keys"><kbd>Super</kbd><span class="shortcut-plus">+</span><kbd>1–9, 0</kbd></span>
+          <span class="shortcut-keys"><kbd>Super</kbd><span class="shortcut-plus">+</span><kbd>1–9</kbd></span>
         </dd>
       </div>
       <div class="shortcut-row">
         <dt>Move the active window to a workspace</dt>
         <dd>
-          <span class="shortcut-keys"><kbd>Super</kbd><span class="shortcut-plus">+</span><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>1–9, 0</kbd></span>
+          <span class="shortcut-keys"><kbd>Super</kbd><span class="shortcut-plus">+</span><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>1–9</kbd></span>
         </dd>
       </div>
     </dl>
@@ -75,7 +75,7 @@ Each monitor has ten workspaces. Number keys select workspaces on the focused mo
         </dd>
       </div>
       <div class="shortcut-row">
-        <dt>Adjust the master-area width</dt>
+        <dt>Resize the active window</dt>
         <dd>
           <span class="shortcut-keys"><kbd>Super</kbd><span class="shortcut-plus">+</span><kbd>Ctrl</kbd><span class="shortcut-plus">+</span><kbd>Left / Right</kbd></span>
         </dd>
@@ -141,7 +141,7 @@ Each monitor has ten workspaces. Number keys select workspaces on the focused mo
       </div>
     </dl>
 
-    <p class="shortcut-caution">Exits immediately without a confirmation dialog. Save your work first.</p>
+    <p class="shortcut-caution">This will be without warning haha.</p>
   </section>
 
   <section class="shortcut-card">
