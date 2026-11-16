@@ -28,6 +28,8 @@ def check(site):
         for legacy in ("foelkdavid/", "docs.debian.foelk.com", "debianzfs-live", "DebianZFS-Install"):
             if legacy.lower() in text.lower():
                 errors.append(f"{page.relative_to(site)}: obsolete reference {legacy}")
+        if "theme-preview" in text or "nortica-palette-preview" in text:
+            errors.append(f"{page.relative_to(site)}: temporary palette selector must not be published")
         parser = Links()
         parser.feed(text)
         for link in parser.links:
@@ -47,6 +49,9 @@ def check(site):
     for expected in ("https://docs.nortica.org/", "media/nortica-symbol.png", "Nortica-Linux/nortica.org"):
         if expected not in home:
             errors.append(f"Home page missing {expected}")
+    for asset in ("theme-preview.css", "theme-preview.js"):
+        if (site / "assets" / asset).exists():
+            errors.append(f"Temporary palette asset must not be published: {asset}")
     if list(site.rglob(".git")):
         errors.append("Git metadata must never be published")
     if errors:

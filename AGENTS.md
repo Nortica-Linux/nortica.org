@@ -1,7 +1,7 @@
 # Website scope
 
 - Work only in this website repository unless the user explicitly approves changes to other Nortica repositories.
-- Use Nortica branding and the Gruvbox palette, with `#d79921` as the dark-theme main yellow; preserve the original warm brown/red/green accents in the light theme. Keep artwork in `media/`, but display only the small top-left logo; do not add a large banner.
+- Use Nortica branding and Gruvbox blue/aqua palettes: storm blue `#83a598` on hard charcoal in dark mode, deep blue `#076678` on warm paper in light mode. Keep the standard light/dark toggle; do not restore the temporary palette selector. Keep artwork in `media/`, but display only the small top-left logo; do not add a large banner.
 - Never rewrite, expand, polish or otherwise change the user's documentation content unless explicitly asked. Rebranding permits only the requested name/link substitutions, not prose, command or structural rewrites.
 - Documentation, issue, source and download links belong to the Nortica-Linux organization. Debian upstream links are still appropriate for Debian itself.
 - Verify commands, release asset names and config paths against the upstream Nortica repositories; do not invent release details.
